@@ -148,7 +148,7 @@ class Player extends Human implements CommandSender, InventoryHolder, ChunkLoade
 	const CREATIVE = 1;
 	const ADVENTURE = 2;
 	const SPECTATOR = 3;
-	const VIEW = Player::SPECTATOR;
+        const VIEW = 3;
 
 	const SURVIVAL_SLOTS = 36;
 	const CREATIVE_SLOTS = 112;
@@ -279,7 +279,7 @@ class Player extends Human implements CommandSender, InventoryHolder, ChunkLoade
 	public function setBanned($value){
 		if($value === true){
 			$this->server->getNameBans()->addBan($this->getName(), null, null, null);
-			$this->kick("You have been banned");
+			$this->kick("§bВы были заблокированы!");
 		}else{
 			$this->server->getNameBans()->remove($this->getName());
 		}
