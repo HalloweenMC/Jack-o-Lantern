@@ -302,7 +302,7 @@ class Server{
 	 * @return string
 	 */
 	public function getName(){
-		return "Prismarine-0.12";
+		return "Jack’o’Lantern-0.12";
 	}
 
 	/**
